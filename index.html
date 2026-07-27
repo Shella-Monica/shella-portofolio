@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shella Monica | Portfolio</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body{
+      font-family: 'Poppins', sans-serif;
+      background-color: #fffaf5;
+      color: #333;
+    }
+
+    a{
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container{
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* NAVBAR */
+    nav{
+      width: 100%;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      background-color: rgba(255,255,255,0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid #f1f1f1;
+    }
+
+    .nav-content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo{
+      font-size: 24px;
+      font-weight: 700;
+      color: #FF8A00;
+    }
+
+    .menu{
+      display: flex;
+      gap: 35px;
+      align-items: center;
+    }
+
+    .menu a{
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .menu a:hover{
+      color: #FF8A00;
+    }
+
+    .hire-btn{
+      background-color: #FF8A00;
+      color: white;
+      padding: 10px 22px;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .hire-btn:hover{
+      background-color: #e77700;
+    }
+
+    /* HERO */
+    .hero{
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text{
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .hero-text h4{
+      color: #FF8A00;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    .hero-text h1{
+      font-size: 55px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .hero-text span{
+      color: #FF8A00;
+    }
+
+    .hero-text p{
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      max-width: 550px;
+    }
+
+    .hero-buttons{
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn-orange{
+      background-color: #FF8A00;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 30px;
+      border: none;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-orange:hover{
+      background-color: #e77700;
+    }
+
+    .btn-outline{
+      background-color: transparent;
+      border: 2px solid #FF8A00;
+      color: #FF8A00;
+      padding: 13px 25px;
+      border-radius: 30px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-outline:hover{
+      background-color: #FF8A00;
+      color: white;
+    }
+
+    .hero-image{
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .hero-image img{
+      width: 100%;
+      max-width: 420px;
+    }
+
+    /* ABOUT */
+    .about{
+      padding: 100px 0;
+    }
+
+    .section-title{
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2{
+      font-size: 40px;
+      color: #FF8A00;
+    }
+
+    .section-title p{
+      color: #777;
+      margin-top: 10px;
+    }
+
+    .about-content{
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      flex-wrap: wrap;
+    }
+
+    .about-image{
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .about-image img{
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .about-text{
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .about-text p{
+      color: #666;
+      line-height: 1.9;
+      margin-bottom: 30px;
+    }
+
+    .info-box{
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card{
+      background-color: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      flex: 1;
+      min-width: 160px;
+      text-align: center;
+    }
+
+    .card h3{
+      color: #FF8A00;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    /* EXPERIENCE */
+
+.experience{
+    padding:100px 0;
+}
+
+.timeline{
+    max-width:900px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+.exp-card{
+    background:#fff;
+    border-left:6px solid #FF8A00;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.exp-card h3{
+    color:#FF8A00;
+    margin-bottom:8px;
+}
+
+.exp-company{
+    font-weight:600;
+    margin-bottom:5px;
+}
+
+.exp-date{
+    color:#777;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.exp-card ul{
+    padding-left:18px;
+    color:#555;
+    line-height:1.9;
+}
+
+    /* SKILLS */
+    .skills{
+      padding: 100px 0;
+      background-color: #fff3e6;
+    }
+
+    .skill-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .skill-card{
+      background-color: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .skill-card:hover{
+      transform: translateY(-8px);
+    }
+
+    .skill-card i{
+      font-size: 45px;
+      color: #FF8A00;
+      margin-bottom: 15px;
+    }
+
+    .skill-card h3{
+      margin-bottom: 10px;
+    }
+
+    .skill-card p{
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* PROJECT */
+    .projects{
+      padding: 100px 0;
+    }
+
+    .project-box{
+      background-color: white;
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+      margin-top: 30px;
+    }
+
+    .project-box h3{
+      color: #FF8A00;
+      margin-bottom: 15px;
+    }
+
+    .project-box p{
+      color: #666;
+      line-height: 1.8;
+    }
+    .tech{
+    display:inline-block;
+    padding:8px 15px;
+    margin:5px;
+    border-radius:25px;
+    background:#FFF3E6;
+    color:#FF8A00;
+    font-size:14px;
+    font-weight:500;
+}
+/* ===========================
+   PROJECT MODAL
+=========================== */
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.modal-content{
+    background:#fff;
+    width:90%;
+    max-width:900px;
+    max-height:90vh;
+    overflow-y:auto;
+    border-radius:20px;
+    padding:35px;
+    position:relative;
+    animation:popup .3s ease;
+}
+
+@keyframes popup{
+    from{
+        opacity:0;
+        transform:translateY(30px) scale(.95);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.close{
+    position:absolute;
+    top:20px;
+    right:25px;
+    font-size:30px;
+    cursor:pointer;
+    color:#FF8A00;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin:25px 0;
+}
+
+.gallery img{
+    width:100%;
+    border-radius:12px;
+}
+
+.badges{
+    margin:20px 0;
+}
+
+.badges span{
+    display:inline-block;
+    background:#FFF3E6;
+    color:#FF8A00;
+    padding:8px 15px;
+    border-radius:20px;
+    margin:5px;
+    font-size:14px;
+}
+
+.contribution{
+    margin-top:25px;
+}
+
+.contribution li{
+    margin-bottom:10px;
+}
+    /* CONTACT */
+    .contact{
+      padding: 100px 0;
+      background-color: #fff3e6;
+      text-align: center;
+    }
+
+    .contact-box{
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact-box p{
+      color: #666;
+      margin: 20px 0 35px;
+      line-height: 1.8;
+    }
+
+    .socials{
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .socials a{
+      width: 50px;
+      height: 50px;
+      background-color: #FF8A00;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    .socials a:hover{
+      transform: scale(1.1);
+    }
+
+    footer{
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+      color: #777;
+      background-color: white;
+    }
+.project-role{
+
+    margin-top:10px;
+    color:#666;
+    margin-bottom:30px;
+
+}
+
+.feature-list{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin:25px 0;
+
+}
+
+.feature-list div{
+
+    background:#fafafa;
+    border-left:4px solid #FF8A00;
+    padding:15px;
+    border-radius:10px;
+
+}
+
+.gallery{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:18px;
+    margin:30px 0;
+
+}
+
+.gallery img{
+
+    width:100%;
+    border-radius:15px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.03);
+
+}
+
+.badges{
+
+    margin-top:20px;
+
+}
+
+.badges span{
+
+    display:inline-block;
+
+    background:#FFF3E6;
+
+    color:#FF8A00;
+
+    padding:8px 15px;
+
+    margin:6px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+}
+
+.contribution{
+
+    margin-top:20px;
+
+}
+
+.contribution li{
+
+    margin-bottom:10px;
+
+}
+
+    /* RESPONSIVE */
+    @media(max-width: 768px){
+
+      .menu{
+        display: none;
+      }
+
+      .hero-text h1{
+        font-size: 40px;
+      }
+
+      .hero-content,
+      .about-content{
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+
+      .hero-text p{
+        margin: auto auto 30px;
+      }
+
+      .hero-buttons{
+        justify-content: center;
+      }
+
+      .info-box{
+        justify-content: center;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="container nav-content">
+
+      <div class="logo">Shella.</div>
+
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+
+     
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div class="hero-text">
+      <h4>Hello, I'm</h4>
+
+    <h1>
+        Shella Monica <br>
+        <span>Quality Assurance & Backend Developer</span>
+    </h1>
+
+    <p>
+    I am an Informatics Engineering graduate with hands-on experience in Quality Assurance
+    and Backend Development. Experienced in manual testing of web-based financial
+    applications, identifying and documenting bugs using ClickUp, performing retesting,
+    and collaborating with developers to improve software quality. I also have experience
+    developing web applications using Laravel, PHP, MySQL, and Python.
+    </p>
+
+        <div class="hero-buttons">
+      
+
+        <a href="#contact" class="btn-outline">
+            <i class="fa-solid fa-envelope"></i> Contact Me
+        </a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="asset/2.png" alt="profile">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>About Me</h2>
+        <p>Get to know me better</p>
+      </div>
+
+      <div class="about-content">
+
+        <div class="about-image">
+          <img src="asset/2.png" alt="about image">
+        </div>
+
+        <div class="about-text">
+
+        <p>
+        I am an Informatics Engineering graduate with experience as a Quality Assurance
+        and Backend Developer. During my professional experience, I performed manual
+        testing for web-based financial applications, executed functional testing,
+        identified and documented bugs using ClickUp, and collaborated with developers
+        to ensure software quality through retesting.
+
+        In addition to software testing, I have experience developing web applications
+        using Laravel, PHP, MySQL, and Python. I enjoy learning new technologies,
+        solving problems, and building reliable software that provides value to users.
+        </p>
+
+          <div class="info-box">
+
+            <div class="card">
+              <h3>2</h3>
+              <p>Professional Experiences</p>
+          </div>
+
+          <div class="card">
+              <h3>3.75</h3>
+              <p>GPA</p>
+          </div>
+
+          <div class="card">
+              <h3>2025</h3>
+              <p>Best Graduate</p>
+          </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+
+<section class="experience" id="experience">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Experience</h2>
+<p>Professional Journey</p>
+</div>
+
+<div class="timeline">
+
+<div class="exp-card">
+
+<h3>Quality Assurance</h3>
+
+<div class="exp-company">
+Qif Media • Pekanbaru
+</div>
+
+<div class="exp-date">
+February 2025 – June 2025
+</div>
+
+<ul>
+
+<li>Performed manual and functional testing for a web-based financial application.</li>
+
+<li>Executed test scenarios based on business requirements.</li>
+
+<li>Identified, documented, and reported software defects using ClickUp.</li>
+
+<li>Collaborated with developers during debugging and retesting.</li>
+
+<li>Created system flow video documentation to support testing activities.</li>
+
+</ul>
+
+</div>
+
+<div class="exp-card">
+
+<h3>Web Developer & Tester Intern</h3>
+
+<div class="exp-company">
+Qif Media • Pekanbaru
+</div>
+
+<div class="exp-date">
+July 2024 – September 2024
+</div>
+
+<ul>
+
+<li>Developed operational dashboard using Laravel and MySQL.</li>
+
+<li>Processed workshop transaction data into operational reports.</li>
+
+<li>Created sales and profit reports for management.</li>
+
+<li>Validated application data to ensure information accuracy.</li>
+
+<li>Collaborated with the team during development and testing.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+  <!-- SKILLS -->
+  <section class="skills" id="skills">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>My Skills</h2>
+        <p>Technologies that I use</p>
+      </div>
+
+      <div class="skill-grid">
+
+        <div class="skill-card">
+          <i class="fa-brands fa-html5"></i>
+          <h3>HTML</h3>
+          <p>Building structured and semantic web pages.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-css3-alt"></i>
+          <h3>CSS</h3>
+          <p>Creating responsive and modern website designs.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-js"></i>
+          <h3>JavaScript</h3>
+          <p>Creating interactive and dynamic web applications.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-brands fa-php"></i>
+          <h3>PHP</h3>
+          <p>Developing backend applications and business logic.</p>
+        </div>
+
+        <div class="skill-card">
+          <i class="fa-solid fa-database"></i>
+          <h3>MySQL</h3>
+          <p>Designing databases, writing queries, and managing application data.</p>
+        </div>
+
+         <div class="skill-card">
+          <i class="fa-solid fa-laravel"></i>
+          <h3>Laravel</h3>
+          <p>Building scalable web applications using Laravel Framework.</p>
+        </div>
+        <div class="skill-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Quality Assurance</h3>
+            <p>Performing manual testing, ensuring software quality, and validating application functionality.</p>
+        </div>
+
+        <div class="skill-card">
+        <i class="fa-solid fa-bug"></i>
+        <h3>Manual Testing</h3>
+        <p>Executing functional testing, reporting bugs, and verifying software fixes.</p>
+    </div>
+
+    <div class="skill-card">
+    <i class="fa-brands fa-python"></i>
+    <h3>Python</h3>
+    <p>Developing automation scripts and solving programming problems.</p>
+</div>
+<div class="skill-card">
+    <i class="fa-solid fa-list-check"></i>
+    <h3>ClickUp</h3>
+    <p>Managing bug reports, tracking issues, and collaborating with development teams.</p>
+</div>
+      </div>
+
+    </div>
+
+  </section>
+
+ <!-- PROJECT -->
+<section class="projects" id="projects">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Projects</h2>
+      <p>Some projects I have worked on</p>
+    </div>
+
+    <div style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+      gap: 30px;
+    ">
+
+      <!-- PROJECT 1 -->
+      <div class="project-box">
+
+        <img src="project1.png" alt="project"
+        style="
+          width: 100%;
+          border-radius: 15px;
+          margin-bottom: 20px;
+        ">
+
+        <h3>Workshop Information System</h3>
+
+        <p>
+          Developed a web-based Workshop Management Information System using
+          Laravel, PHP, and MySQL. The system provides customer management,
+          service transactions, operational reporting, and dashboard monitoring
+          to improve workshop business processes.
+          </p>
+
+        <div style="margin-top:20px;">
+
+        <strong>Technology :</strong>
+
+        <br><br>
+
+        <span class="tech">Laravel</span>
+
+        <span class="tech">PHP</span>
+
+        <span class="tech">MySQL</span>
+
+        <span class="tech">Bootstrap</span>
+
+        </div>
+        <button class="btn-orange"
+onclick="openModal('workshopModal')">
+
+View Details
+
+</button>
+
+              </div>
+
+      <!-- PROJECT 2 -->
+<div class="project-box">
+
+    <img src="qa-project.png"
+         alt="Financial Web Application Testing"
+         style="
+         width:100%;
+         border-radius:15px;
+         margin-bottom:20px;">
+
+    <h3>Financial Web Application Testing</h3>
+
+    <p>
+        Conducted manual and functional testing for a web-based financial
+        application. Responsible for executing test scenarios, identifying
+        bugs, documenting issues using ClickUp, performing retesting after
+        fixes, and ensuring the application met business requirements.
+    </p>
+
+    <div style="margin-top:20px;">
+
+        <strong>Role :</strong> Quality Assurance
+        <br><br>
+
+        <strong>Tools :</strong>
+
+        <span style="
+        background:#FFF3E6;
+        color:#FF8A00;
+        padding:6px 12px;
+        border-radius:20px;
+        margin-right:8px;
+        display:inline-block;
+        margin-top:8px;">
+            Manual Testing
+        </span>
+
+        <span style="
+        background:#FFF3E6;
+        color:#FF8A00;
+        padding:6px 12px;
+        border-radius:20px;
+        margin-right:8px;
+        display:inline-block;
+        margin-top:8px;">
+            Functional Testing
+        </span>
+
+        <span style="
+        background:#FFF3E6;
+        color:#FF8A00;
+        padding:6px 12px;
+        border-radius:20px;
+        margin-right:8px;
+        display:inline-block;
+        margin-top:8px;">
+            ClickUp
+        </span>
+
+        <span style="
+        background:#FFF3E6;
+        color:#FF8A00;
+        padding:6px 12px;
+        border-radius:20px;
+        display:inline-block;
+        margin-top:8px;">
+            Retesting
+        </span>
+<button class="btn-orange"
+onclick="openModal('qaModal')">
+
+View Details
+
+</button>
+    </div>
+
+</div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <div class="container contact-box">
+
+      <div class="section-title">
+        <h2>Contact Me</h2>
+        <p>Let's work together</p>
+      </div>
+
+      <p>
+        Interested in collaborating or discussing a project?
+        Feel free to contact me through social media or email.
+      </p>
+
+      <div class="socials">
+
+
+        <a href="linkedin.com/in/shellamonicaa"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:shellamoniica17@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+            <p class="copyright">
+
+            © 2026 Shella Monica. All Rights Reserved.
+
+        </p>
+  </footer>
+<!-- =========================
+WORKSHOP PROJECT MODAL
+========================= -->
+
+<div class="modal" id="workshopModal">
+
+    <div class="modal-content">
+
+        <span class="close"
+            onclick="closeModal('workshopModal')">
+            &times;
+        </span>
+
+        <h2>Workshop Operational Management System</h2>
+
+        <p class="project-role">
+            <strong>Role :</strong> Backend Developer & Tester
+        </p>
+
+        <!-- Gallery -->
+
+        <div class="gallery">
+
+            <img src="asset/kasir.png" alt="Kasir">
+
+            <img src="asset/Transaksipenjualan).png" alt="Sales Transaction">
+
+            <img src="asset/transaksi pembelian.png" alt="Purchase Transaction">
+
+        </div>
+
+        <h3>Overview</h3>
+
+        <p>
+
+            A web-based workshop operational management system developed using
+            Laravel and MySQL to streamline daily workshop activities,
+            including cashier transactions, inventory management,
+            sales, purchases, and reporting.
+
+        </p>
+
+        <h3>Key Features</h3>
+
+        <div class="feature-list">
+
+            <div>✔ Cashier Transaction</div>
+
+            <div>✔ Sales Transaction</div>
+
+            <div>✔ Purchase Transaction</div>
+
+            <div>✔ Inventory Management</div>
+
+            <div>✔ Mechanic Management</div>
+
+            <div>✔ Reporting Module</div>
+
+        </div>
+
+        <h3>My Contribution</h3>
+
+        <ul class="contribution">
+
+            <li>Developed Sales Report module.</li>
+
+            <li>Developed Profit Report module.</li>
+
+            <li>Created MySQL queries for report generation.</li>
+
+            <li>Performed data validation to ensure report accuracy.</li>
+
+            <li>Conducted feature testing before deployment.</li>
+
+            <li>Collaborated with developers during implementation.</li>
+
+        </ul>
+
+        <h3>Technology</h3>
+
+        <div class="badges">
+
+            <span>Laravel</span>
+
+            <span>PHP</span>
+
+            <span>MySQL</span>
+
+            <span>Bootstrap</span>
+
+            <span>JavaScript</span>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- =========================
+QA PROJECT MODAL
+========================= -->
+
+<div class="modal" id="qaModal">
+
+    <div class="modal-content">
+
+        <span class="close"
+            onclick="closeModal('qaModal')">&times;</span>
+
+        <h2>Financial Web Application Testing</h2>
+
+        <p class="project-role">
+            <strong>Role :</strong> Quality Assurance
+        </p>
+
+        <!-- Screenshot -->
+
+        <div class="gallery">
+
+            <img src="asset/QA.png"
+                 alt="ClickUp Bug Tracking">
+
+        </div>
+
+        <p style="text-align:center;color:#777;font-size:14px;">
+            Bug tracking and task management using ClickUp during software testing.
+        </p>
+
+        <h3>Overview</h3>
+
+        <p>
+            Performed manual testing on a financial web application by
+            executing functional test scenarios, documenting defects,
+            verifying bug fixes through retesting, and collaborating
+            with developers to ensure software quality.
+        </p>
+
+        <h3>Responsibilities</h3>
+
+        <div class="feature-list">
+
+            <div>✔ Executed Functional Testing</div>
+
+            <div>✔ Reported Bugs Using ClickUp</div>
+
+            <div>✔ Verified Bug Fixes</div>
+
+            <div>✔ Performed Retesting</div>
+
+            <div>✔ Validated System Functionality</div>
+
+            <div>✔ Created Testing Documentation</div>
+
+        </div>
+
+        <h3>Tools</h3>
+
+        <div class="badges">
+
+            <span>ClickUp</span>
+
+            <span>Manual Testing</span>
+
+            <span>Functional Testing</span>
+
+            <span>Retesting</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+function openModal(id){
+
+document.getElementById(id).style.display="flex";
+
+}
+
+function closeModal(id){
+
+document.getElementById(id).style.display="none";
+
+}
+
+window.onclick=function(e){
+
+document.querySelectorAll('.modal').forEach(function(modal){
+
+if(e.target==modal){
+
+modal.style.display='none';
+
+}
+
+});
+
+}
+
+</script>
+</body>
+</html>
